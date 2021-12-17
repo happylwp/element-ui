@@ -3,9 +3,7 @@
     class="el-select"
     :class="[
       selectSize ? 'el-select--' + selectSize : '',
-      {
-        'is-no-border': noBorder
-      }
+      mode ? 'el-select--' + mode : ''
     ]"
     @click.stop="toggleMenu"
     v-clickoutside="handleClose">
@@ -307,7 +305,7 @@
         type: Boolean,
         default: true
       },
-      noBorder: Boolean
+      mode: String
     },
 
     data() {

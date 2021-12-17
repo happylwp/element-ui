@@ -32,7 +32,7 @@
     }
   }
 
-  @include when(no-border) {
+  @include m(no-bg) {
     .el-input {
       &.is-focus {
         border-color: transparent;
@@ -55,26 +55,70 @@
         border: none;
         border-color: transparent;
         background-color: transparent;
+      }
 
-        &:focus {
-          outline: none;
-          border-color: $--button-default-selected-bg-color;
-          color: $--color-white;
-          background-color: $--button-default-selected-bg-color;
-          .el-input__inner::placeholder {
-            color: $--color-white;
-          }
-        }
-
-        &:hover {
-          background-color: $--form-field-hover-bg-color;
+      &:not(.is-focus) {
+        .el-input__inner:hover {
+          color: $--button-default-font-color;
+          background-color: $--button-default-hover-bg-color;
         }
       }
 
-      .el-input__inner:focus + .el-input__suffix {
+      &:not(.is-focus) {
+        .el-input__inner:active {
+          color: $--button-default-active-text-color;
+          background-color: $--button-default-active-bg-color;
+        }
+        .el-input__inner:active + .el-input__suffix {
+          .el-input__icon {
+            color: $--button-default-active-text-color;
+          }
+        }
+      }
+    }
+  }
+
+  @include m(no-border) {
+    .el-input {
+      &.is-focus {
+        border-color: transparent;
+        .el-input__inner {
+          outline: none;
+          border-color: $--button-default-selected-bg-color;
+          color: $--color-white;
+          background-color: $--button-default-selected-bg-color !important;
+          &::placeholder {
+            color: $--color-white;
+          }
+        }
         .el-select__caret,
         .el-input__icon {
           color: $--color-white;
+        }
+      }
+
+      .el-input__inner {
+        border: none;
+        border-color: transparent;
+        background: $--button-default-background-color;
+      }
+
+      &:not(.is-focus) {
+        .el-input__inner:hover {
+          color: $--button-default-font-color;
+          background-color: $--button-default-hover-bg-color;
+        }
+      }
+
+      &:not(.is-focus) {
+        .el-input__inner:active {
+          color: $--button-default-active-text-color;
+          background-color: $--button-default-active-bg-color;
+        }
+        .el-input__inner:active + .el-input__suffix {
+          .el-input__icon {
+            color: $--button-default-active-text-color;
+          }
         }
       }
     }

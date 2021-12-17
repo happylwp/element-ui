@@ -85,7 +85,8 @@
       // border-color: $--button-disabled-border-color;
     }
 
-    &.el-button--text {
+    &.el-button--text, 
+    &.el-button--primary-text {
       background-color: transparent;
     }
 
@@ -263,6 +264,32 @@
     //   border-color: transparent;
     //   background-color: transparent;
     // }
+
+    &:hover,
+    &:focus,
+    &:active {
+      background: transparent;
+    }
+  }
+
+  @include m(primary-text) {
+    border-color: transparent;
+    color: $--color-primary;
+    background-color: transparent;
+    padding-left: 0;
+    padding-right: 0;
+
+    &:hover,
+    &:focus {
+      color: mix($--color-white, $--color-primary, $--button-hover-tint-percent);
+      border-color: transparent;
+      background-color: transparent;
+    }
+    &:active {
+      color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
+      border-color: transparent;
+      background-color: transparent;
+    }
 
     &:hover,
     &:focus,

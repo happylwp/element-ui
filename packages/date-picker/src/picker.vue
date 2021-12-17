@@ -10,7 +10,7 @@
     v-if="!ranged"
     v-clickoutside="handleClose"
     :placeholder="placeholder"
-    @focus="handleFocus"
+    @click.native="handleFocus"
     @keydown.native="handleKeydown"
     :value="displayValue"
     @input="value => userInput = value"

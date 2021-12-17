@@ -22,7 +22,7 @@
   &.el-tag--info {
     background-color: mix($--tag-info-color, $--color-white, $backgroundColorWeight);
     // border-color: mix($--tag-info-color, $--color-white, $borderColorWeight);
-    color: mix($--tag-info-color, $--color-white, $fontColorWeight);
+    color: $--color-black;
 
     @include when(hit) {
       // border-color: $--tag-info-color;
@@ -38,9 +38,9 @@
   }
 
   &.el-tag--success {
-    background-color: mix($--tag-success-color, $--color-white, $backgroundColorWeight);
+    background-color: $--color-g75;
     // border-color: mix($--tag-success-color, $--color-white, $borderColorWeight);
-    color: mix($--tag-success-color, $--color-white, $fontColorWeight);
+    color: $--color-black;
 
     @include when(hit) {
       // border-color: $--tag-success-color;
@@ -56,9 +56,9 @@
   }
 
   &.el-tag--warning {
-    background-color: mix($--tag-warning-color, $--color-white, $backgroundColorWeight);
+    background-color: $--color-y75;
     // border-color: mix($--tag-warning-color, $--color-white, $borderColorWeight);
-    color: mix($--tag-warning-color, $--color-white, $fontColorWeight);
+    color: $--color-black;
 
     @include when(hit) {
       // border-color: $--tag-warning-color;
@@ -74,9 +74,9 @@
   }
 
   &.el-tag--danger {
-    background-color: mix($--tag-danger-color, $--color-white, $backgroundColorWeight);
+    background-color: $--color-r75;
     // border-color: mix($--tag-danger-color, $--color-white, $borderColorWeight);
-    color: mix($--tag-danger-color, $--color-white, $fontColorWeight);
+    color: $--color-r500;
 
     @include when(hit) {
       // border-color: $--tag-danger-color;
@@ -95,9 +95,9 @@
 @include b(tag) {
   @include genTheme(10%, 20%, 100%, 100%);
   display: inline-block;
-  height: 32px;
+  height: 20px;
   padding: $--tag-padding;
-  line-height: 30px;
+  line-height: 18px;
   font-size: $--tag-font-size;
   color: $--tag-primary-color;
   border-width: 1px;
@@ -112,12 +112,12 @@
     position: relative;
     cursor: pointer;
     font-size: 12px;
-    height: 16px;
-    width: 16px;
-    line-height: 16px;
+    height: 12px;
+    width: 12px;
+    line-height: 12px;
     vertical-align: middle;
-    top: -1px;
-    right: -5px;
+    top: 0;
+    right: -2px;
 
     &::before {
       display: block;
@@ -126,6 +126,10 @@
 
   @include m(dark) {
     @include genTheme(100%, 100%, 0, 80%);
+
+    &.el-tag--info {
+      color: white;
+    }
   }
 
   @include m(plain) {

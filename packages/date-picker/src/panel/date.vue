@@ -131,7 +131,7 @@
           {{ t('el.datepicker.now') }}
         </el-button>
         <el-button
-          plain
+          type="primary"
           size="small"
           class="el-picker-panel__link-btn"
           @click="confirm">

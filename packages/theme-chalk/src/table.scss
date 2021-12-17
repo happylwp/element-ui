@@ -252,6 +252,21 @@
   // 拥有多级表头
   @include m((group, border)) {
     border: $--table-border;
+    border-left: none;
+
+    td.el-table__cell {
+      border-bottom-color: $--table-border-color;
+    }
+
+    thead.has-gutter {
+      .el-table__cell:nth-last-child(2) {
+        border-right: none;
+      }
+    }
+
+    .el-table__cell:last-child {
+      border-right: none;
+    }
 
     @include share-rule(border-pseudo) {
       content: '';
@@ -261,13 +276,13 @@
     }
 
     // 表格右部伪 border
-    &::after {
-      @include extend-rule(border-pseudo);
-      top: 0;
-      right: 0;
-      width: 1px;
-      height: 100%;
-    }
+    // &::after {
+    //   @include extend-rule(border-pseudo);
+    //   top: 0;
+    //   right: 0;
+    //   width: 1px;
+    //   height: 100%;
+    // }
   }
 
   // 表格底部伪 border，总是有的
@@ -284,9 +299,9 @@
     border-right: none;
     border-bottom: none;
 
-    &.el-loading-parent--relative {
-      border-color: transparent;
-    }
+    // &.el-loading-parent--relative {
+    //   border-color: inherit;
+    // }
 
     .el-table__cell {
       border-right: $--table-border;

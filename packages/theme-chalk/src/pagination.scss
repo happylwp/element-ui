@@ -131,7 +131,6 @@
 
   @include e(sizes) {
     margin: 0 10px 0 0;
-    font-weight: normal;
     color: $--color-black;
 
     .el-input .el-input__inner {
@@ -146,13 +145,11 @@
 
   @include e(total) {
     margin-right: 10px;
-    font-weight: normal;
     color: $--color-black;
   }
 
   @include e(jump) {
     margin-left: 24px;
-    font-weight: normal;
     color: $--color-black;
 
     .el-input__inner {

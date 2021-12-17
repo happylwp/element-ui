@@ -168,19 +168,19 @@
       </div>
       <div class="el-picker-panel__footer" v-if="showTime">
         <el-button
-          size="small"
-          type="text"
-          class="el-picker-panel__link-btn"
-          @click="handleClear">
-          {{ t('el.datepicker.clear') }}
-        </el-button>
-        <el-button
-          plain
+          type="primary"
           size="small"
           class="el-picker-panel__link-btn"
           :disabled="btnDisabled"
           @click="handleConfirm(false)">
           {{ t('el.datepicker.confirm') }}
+        </el-button>
+        <el-button
+          size="small"
+          type="text"
+          class="el-picker-panel__link-btn"
+          @click="handleClear">
+          {{ t('el.datepicker.clear') }}
         </el-button>
       </div>
     </div>

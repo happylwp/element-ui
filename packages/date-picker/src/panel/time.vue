@@ -20,11 +20,11 @@
           type="button"
           class="el-time-panel__btn cancel"
           @click="handleCancel">{{ t('el.datepicker.cancel') }}</button>
-        <button
-          type="button"
-          class="el-time-panel__btn"
+        <el-button
+          type="primary"
+          size="small"
           :class="{confirm: !disabled}"
-          @click="handleConfirm()">{{ t('el.datepicker.confirm') }}</button>
+          @click="handleConfirm()">{{ t('el.datepicker.confirm') }}</el-button>
       </div>
     </div>
   </transition>

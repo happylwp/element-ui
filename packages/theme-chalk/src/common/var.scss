@@ -708,10 +708,10 @@ $--button-medium-padding-vertical: 4px !default;
 $--button-medium-padding-horizontal: 6px !default;
 
 /// fontSize||Font|1
-$--button-small-font-size: $--font-size-base !default;
+$--button-small-font-size: 12px !default;
 $--button-small-border-radius: #{$--border-radius-base - 1} !default;
 /// padding||Spacing|3
-$--button-small-padding-vertical: 4px !default;
+$--button-small-padding-vertical: 3px !default;
 /// padding||Spacing|3
 $--button-small-padding-horizontal: 6px !default;
 /// fontSize||Font|1
@@ -926,7 +926,7 @@ $--tag-warning-color: $--color-warning !default;
 $--tag-danger-color: $--color-danger !default;
 /// fontSize||Font|1
 $--tag-font-size: 12px !default;
-$--tag-border-radius: 3px !default;
+$--tag-border-radius: $--border-radius-base !default;
 $--tag-padding: 0 4px !default;
 
 /* Tree

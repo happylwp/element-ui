@@ -118,8 +118,8 @@ export default Vue.extend({
 
     // 选择
     isSelected(row) {
-      const { selection = [] } = this.states;
-      return selection.indexOf(row) > -1;
+      const { selection = [], rowKey } = this.states;
+      return rowKey ? selection.findIndex(item => item[rowKey] === row[rowKey]) > -1 : selection.indexOf(row) > -1;
     },
 
     clearSelection() {
@@ -156,9 +156,11 @@ export default Vue.extend({
     },
 
     toggleRowSelection(row, selected, emitChange = true) {
-      const changed = toggleRowStatus(this.states.selection, row, selected);
+      const states = this.states;
+      const { selection, rowKey } = states;
+      const changed = toggleRowStatus(selection, row, selected, rowKey);
       if (changed) {
-        const newSelection = (this.states.selection || []).slice();
+        const newSelection = (selection || []).slice();
         // 调用 API 修改选中值，不触发 select 事件
         if (emitChange) {
           this.table.$emit('select', newSelection, row);
@@ -169,7 +171,7 @@ export default Vue.extend({
 
     _toggleAllSelection() {
       const states = this.states;
-      const { data = [], selection } = states;
+      const { data = [], selection, rowKey } = states;
       // when only some rows are selected (but not all), select or deselect all of them
       // depending on the value of selectOnIndeterminate
       const value = states.selectOnIndeterminate
@@ -180,11 +182,11 @@ export default Vue.extend({
       let selectionChanged = false;
       data.forEach((row, index) => {
         if (states.selectable) {
-          if (states.selectable.call(null, row, index) && toggleRowStatus(selection, row, value)) {
+          if (states.selectable.call(null, row, index) && toggleRowStatus(selection, row, value, rowKey)) {
             selectionChanged = true;
           }
         } else {
-          if (toggleRowStatus(selection, row, value)) {
+          if (toggleRowStatus(selection, row, value, rowKey)) {
             selectionChanged = true;
           }
         }

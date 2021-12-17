@@ -270,9 +270,15 @@
         default: true
       },
 
-      stripe: Boolean,
+      stripe: {
+        type: Boolean,
+        default: true
+      },
 
-      border: Boolean,
+      border: {
+        type: Boolean,
+        default: true
+      },
 
       rowKey: [String, Function],
 
