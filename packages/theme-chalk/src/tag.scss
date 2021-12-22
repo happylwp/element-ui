@@ -11,13 +11,13 @@
     // border-color: $--tag-primary-color;
   }
 
-  .el-tag__close {
-    color: mix($--tag-primary-color, $--color-white, $fontColorWeight);
-    &:hover {
-      color: $--color-white;
-      background-color: mix($--tag-primary-color, $--color-white, $hoverColorWeight);
-    }
-  }
+  // .el-tag__close {
+  //   color: mix($--tag-primary-color, $--color-white, $fontColorWeight);
+  //   &:hover {
+  //     color: $--color-white;
+  //     background-color: mix($--tag-primary-color, $--color-white, $hoverColorWeight);
+  //   }
+  // }
 
   &.el-tag--info {
     background-color: mix($--tag-info-color, $--color-white, $backgroundColorWeight);
@@ -28,13 +28,13 @@
       // border-color: $--tag-info-color;
     }
 
-    .el-tag__close {
-      color: mix($--tag-info-color, $--color-white, $fontColorWeight);
-      &:hover {
-        color: $--color-white;
-        background-color: mix($--tag-info-color, $--color-white, $hoverColorWeight);
-      }
-    }
+    // .el-tag__close {
+    //   color: mix($--tag-info-color, $--color-white, $fontColorWeight);
+    //   &:hover {
+    //     color: $--color-white;
+    //     background-color: mix($--tag-info-color, $--color-white, $hoverColorWeight);
+    //   }
+    // }
   }
 
   &.el-tag--success {
@@ -46,13 +46,13 @@
       // border-color: $--tag-success-color;
     }
 
-    .el-tag__close {
-      color: mix($--tag-success-color, $--color-white, $fontColorWeight);
-      &:hover {
-        color: $--color-white;
-        background-color: mix($--tag-success-color, $--color-white, $hoverColorWeight);
-      }
-    }
+    // .el-tag__close {
+    //   color: mix($--tag-success-color, $--color-white, $fontColorWeight);
+    //   &:hover {
+    //     color: $--color-white;
+    //     background-color: mix($--tag-success-color, $--color-white, $hoverColorWeight);
+    //   }
+    // }
   }
 
   &.el-tag--warning {
@@ -64,13 +64,13 @@
       // border-color: $--tag-warning-color;
     }
 
-    .el-tag__close {
-      color: mix($--tag-warning-color, $--color-white, $fontColorWeight);
-      &:hover {
-        color: $--color-white;
-        background-color: mix($--tag-warning-color, $--color-white, $hoverColorWeight);
-      }
-    }
+    // .el-tag__close {
+    //   color: mix($--tag-warning-color, $--color-white, $fontColorWeight);
+    //   &:hover {
+    //     color: $--color-white;
+    //     background-color: mix($--tag-warning-color, $--color-white, $hoverColorWeight);
+    //   }
+    // }
   }
 
   &.el-tag--danger {
@@ -82,13 +82,13 @@
       // border-color: $--tag-danger-color;
     }
 
-    .el-tag__close {
-      color: mix($--tag-danger-color, $--color-white, $fontColorWeight);
-      &:hover {
-        color: $--color-white;
-        background-color: mix($--tag-danger-color, $--color-white, $hoverColorWeight);
-      }
-    }
+    // .el-tag__close {
+    //   color: mix($--tag-danger-color, $--color-white, $fontColorWeight);
+    //   &:hover {
+    //     color: $--color-white;
+    //     background-color: mix($--tag-danger-color, $--color-white, $hoverColorWeight);
+    //   }
+    // }
   }
 }
 
@@ -106,18 +106,25 @@
   box-sizing: border-box;
   white-space: nowrap;
 
-  .el-icon-close {
-    border-radius: 50%;
+  .el-tag__close {
+    border-radius: $--border-radius-base;
     text-align: center;
-    position: relative;
+    height: 18px;
+    width: 20px;
+    display: inline-block;
+    margin-right: -4px;
     cursor: pointer;
+
+    &:hover {
+      background: $--color-r75;
+    }
+  }
+
+  .el-icon-close {
+    position: relative;
     font-size: 12px;
-    height: 12px;
-    width: 12px;
-    line-height: 12px;
     vertical-align: middle;
-    top: 0;
-    right: -2px;
+    color: $--color-black;
 
     &::before {
       display: block;
@@ -140,8 +147,9 @@
     height: 28px;
     line-height: 26px;
 
-    .el-icon-close {
-      transform: scale(.8);
+    .el-tag__close {
+      height: 26px;
+      width: 26px;
     }
   }
 
@@ -150,8 +158,10 @@
     padding: 0 8px;
     line-height: 22px;
 
-    .el-icon-close {
-      transform: scale(.8);
+    .el-tag__close {
+      margin-right: -8px;
+      height: 22px;
+      width: 22px;
     }
   }
 
@@ -160,9 +170,9 @@
     padding: 0 5px;
     line-height: 19px;
 
-    .el-icon-close {
-      margin-left: -3px;
-      transform: scale(.7);
+    .el-tag__close {
+      height: 18px;
+      width: 18px;
     }
   }
 }

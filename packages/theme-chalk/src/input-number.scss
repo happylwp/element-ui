@@ -1,3 +1,4 @@
+@use "sass:math";
 @import "mixins/mixins";
 @import "common/var";
 @import "input";
@@ -50,15 +51,15 @@
   }
 
   @include e(increase) {
-    right: $--border-width-base;
+    right: $--input-border-width-medium; // 按照input的边框
     border-radius: 0 $--border-radius-base $--border-radius-base 0;
-    border-left: $--border-base;
+    border-left: $--border-medium;
   }
 
   @include e(decrease) {
-    left: $--border-width-base;
+    left: $--input-border-width-medium;
     border-radius: $--border-radius-base 0 0 $--border-radius-base;
-    border-right: $--border-base;
+    border-right: $--border-medium;
   }
 
   @include when(disabled) {
@@ -140,8 +141,8 @@
     }
 
     @include e((increase, decrease)) {
-      height: #{($--input-height - 2) / 2};
-      line-height: #{($--input-height - 2) / 2};
+      height: #{math.div($--input-height - 4, 2)};
+      line-height: #{math.div($--input-height - 4, 2)};
 
       [class*=el-icon] {
         transform: scale(.8);
@@ -150,34 +151,34 @@
 
     @include e(increase) {
       border-radius: 0 $--border-radius-base 0 0;
-      border-bottom: $--border-base;
+      border-bottom: $--border-medium;
     }
 
     @include e(decrease) {
-      right: 1px;
+      right: $--input-border-width-medium;
       bottom: $--input-border-width-medium;
       top: auto;
       left: auto;
       border-right: none;
-      border-left: $--border-base;
+      border-left: $--border-medium;
       border-radius: 0 0 $--border-radius-base 0;
     }
 
     &[class*=medium] {
       [class*=increase], [class*=decrease] {
-        line-height: #{($--input-medium-height - 2) / 2};
+        line-height: #{math.div($--input-medium-height - 4, 2)};
       }
     }
 
     &[class*=small] {
       [class*=increase], [class*=decrease] {
-        line-height: #{($--input-small-height - 2) / 2};
+        line-height: #{math.div($--input-small-height - 4, 2)};
       }
     }
 
     &[class*=mini] {
       [class*=increase], [class*=decrease] {
-        line-height: #{($--input-mini-height - 2) / 2};
+        line-height: #{math.div($--input-mini-height - 4, 2)};
       }
     }
   }
