@@ -254,18 +254,32 @@
     border: $--table-border;
     border-left: none;
 
+    // 默认border-bottom 是透明的。加上颜色
     td.el-table__cell {
       border-bottom-color: $--table-border-color;
     }
 
+    // has-gutter下。倒数第二个是展示的最后一个，因为右边没有边框，所以需要隐藏
     thead.has-gutter {
       .el-table__cell:nth-last-child(2) {
         border-right: none;
       }
     }
-
-    .el-table__cell:last-child {
-      border-right: none;
+    
+    // 隐藏 最后一列的 border-right,保证table border 风格下左右没有边框
+    .el-table__fixed-right {
+      .el-table__fixed-header-wrapper,
+      .el-table__fixed-body-wrapper {
+        .el-table__cell:last-child {
+          border-right: none;
+        }
+      }
+    }
+    .el-table__header-wrapper,
+    .el-table__body-wrapper {
+      .el-table__cell:last-child {
+        border-right: none;
+      }
     }
 
     @include share-rule(border-pseudo) {

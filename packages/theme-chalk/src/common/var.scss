@@ -502,10 +502,10 @@ $--alert-close-font-weight: $--font-weight-close-base !default;
 /// fontSize||Font|1
 $--alert-close-customed-font-size: 13px !default;
 
-$--alert-success-color: $--color-success-lighter !default;
-$--alert-info-color: $--color-info-lighter !default;
-$--alert-warning-color: $--color-warning-lighter !default;
-$--alert-danger-color: $--color-danger-lighter !default;
+$--alert-success-color: $--color-g50 !default;
+$--alert-info-color: $--color-n50 !default;
+$--alert-warning-color: $--color-y50 !default;
+$--alert-danger-color: $--color-r50 !default;
 
 /// height||Other|4
 $--alert-icon-size: 16px !default;

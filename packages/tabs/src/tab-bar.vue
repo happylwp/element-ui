@@ -7,7 +7,8 @@
     name: 'TabBar',
 
     props: {
-      tabs: Array
+      tabs: Array,
+      parent: Object
     },
 
     inject: ['rootTabs'],
@@ -42,6 +43,17 @@
               return false;
             }
           });
+
+          const tabDropdown = this.parent.$refs.tabDropdown;
+          const { moreShow, moreLabel } = this.parent;
+          if (moreShow && moreLabel && tabDropdown) {
+            tabSize = tabDropdown.$el[`client${firstUpperCase(sizeName)}`];
+            const tabStyles = window.getComputedStyle(tabDropdown.$el);
+            if (sizeName === 'width') {
+              tabSize -= parseFloat(tabStyles.paddingLeft) + parseFloat(tabStyles.paddingRight);
+              offset += parseFloat(tabStyles.paddingLeft);
+            }
+          }
 
           const transform = `translate${firstUpperCase(sizeDir)}(${offset}px)`;
           style[sizeName] = tabSize + 'px';

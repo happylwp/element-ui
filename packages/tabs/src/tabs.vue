@@ -20,7 +20,11 @@
         default: 'top'
       },
       beforeLeave: Function,
-      stretch: Boolean
+      stretch: Boolean,
+      navMode: {
+        type: String,
+        default: 'default' // default more
+      }
     },
 
     provide() {
@@ -112,6 +116,7 @@
     render(h) {
       let {
         type,
+        navMode,
         handleTabClick,
         handleTabRemove,
         handleTabAdd,
@@ -143,6 +148,7 @@
           onTabRemove: handleTabRemove,
           editable,
           type,
+          mode: navMode,
           panes,
           stretch
         },

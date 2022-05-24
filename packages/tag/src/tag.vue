@@ -47,7 +47,7 @@
           on-click={ this.handleClick }>
           { this.$slots.default }
           {
-            this.closable && <span class="el-tag__close" on-click={ this.handleClose }><i class="el-icon-close"></i></span>
+            this.closable && <i class="el-tag__close el-icon-close" on-click={ this.handleClose }></i>
           }
         </span>
       );

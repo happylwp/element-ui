@@ -83,6 +83,15 @@
     float: left;
     z-index: #{$--index-normal + 1};
 
+    @include m(more) {
+      .el-tabs--dropdown {
+        padding-left: 20px;
+      }
+      .el-button--default {
+        background-color: transparent;
+      }
+    }
+
     @include when(stretch) {
       min-width: 100%;
       display: flex;

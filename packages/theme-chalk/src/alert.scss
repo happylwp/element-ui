@@ -18,7 +18,7 @@
   @include when(light) {
     .el-alert__closebtn {
       font-weight: $--alert-close-font-weight;
-      color: $--color-text-placeholder;
+      color: $--color-text-regular;
     }
   }
 
@@ -71,10 +71,10 @@
   @include m(warning) {
     &.is-light {
       background-color: $--alert-warning-color;
-      color: $--color-warning;
+      color: $--color-text-primary;
 
       .el-alert__description {
-        color: $--color-warning;
+        color: $--color-text-secondary;
       }
     }
 

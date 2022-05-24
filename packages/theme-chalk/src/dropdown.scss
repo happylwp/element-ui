@@ -103,7 +103,7 @@
     color: $--color-text-regular;
     cursor: pointer;
     outline: none;
-    &:not(.is-disabled):hover, &:focus {
+    &:not(.is-disabled).is-active,&:not(.is-disabled):hover, &:focus {
       background-color: $--dropdown-menuItem-hover-fill;
       color: $--dropdown-menuItem-hover-color;
     }
