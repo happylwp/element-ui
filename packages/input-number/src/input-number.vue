@@ -49,6 +49,7 @@
   import ElInput from 'element-ui/packages/input';
   import Focus from 'element-ui/src/mixins/focus';
   import RepeatClick from 'element-ui/src/directives/repeat-click';
+  import debounce from 'throttle-debounce/debounce';
 
   export default {
     name: 'ElInputNumber',
@@ -192,6 +193,9 @@
         return currentValue;
       }
     },
+    created() {
+      this.debouncedHandleInputChange = debounce(300, this.handleInputChange);
+    },
     methods: {
       toPrecision(num, precision) {
         if (precision === undefined) precision = this.numPrecision;
@@ -254,6 +258,7 @@
       },
       handleInput(value) {
         this.userInput = value;
+        this.debouncedHandleInputChange(value);
       },
       handleInputChange(value) {
         const newVal = value === '' ? undefined : Number(value);
