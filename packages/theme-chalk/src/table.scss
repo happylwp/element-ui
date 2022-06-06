@@ -201,7 +201,7 @@
       box-sizing: border-box;
       position: relative;
       vertical-align: middle;
-      // padding-left: 10px;
+      // padding-left: 10px ;
       // padding-right: 10px;
       width: 100%;
 
@@ -223,7 +223,6 @@
   }
 
   td.el-table__cell {
-    border-bottom: $--table-drag-border;
     div {
       box-sizing: border-box;
     }
@@ -252,35 +251,34 @@
   // 拥有多级表头
   @include m((group, border)) {
     border: $--table-border;
-    border-left: none;
 
-    // 默认border-bottom 是透明的。加上颜色
-    td.el-table__cell {
-      border-bottom-color: $--table-border-color;
-    }
+    // // 默认border-bottom 是透明的。加上颜色
+    // td.el-table__cell {
+    //   border-bottom-color: $--table-border-color;
+    // }
 
-    // has-gutter下。倒数第二个是展示的最后一个，因为右边没有边框，所以需要隐藏
-    thead.has-gutter {
-      .el-table__cell:nth-last-child(2) {
-        border-right: none;
-      }
-    }
+    // // has-gutter下。倒数第二个是展示的最后一个，因为右边没有边框，所以需要隐藏
+    // thead.has-gutter {
+    //   .el-table__cell:nth-last-child(2) {
+    //     border-right: none;
+    //   }
+    // }
     
-    // 隐藏 最后一列的 border-right,保证table border 风格下左右没有边框
-    .el-table__fixed-right {
-      .el-table__fixed-header-wrapper,
-      .el-table__fixed-body-wrapper {
-        .el-table__cell:last-child {
-          border-right: none;
-        }
-      }
-    }
-    .el-table__header-wrapper,
-    .el-table__body-wrapper {
-      .el-table__cell:last-child {
-        border-right: none;
-      }
-    }
+    // // 隐藏 最后一列的 border-right,保证table border 风格下左右没有边框
+    // .el-table__fixed-right {
+    //   .el-table__fixed-header-wrapper,
+    //   .el-table__fixed-body-wrapper {
+    //     .el-table__cell:last-child {
+    //       border-right: none;
+    //     }
+    //   }
+    // }
+    // .el-table__header-wrapper,
+    // .el-table__body-wrapper {
+    //   .el-table__cell:last-child {
+    //     border-right: none;
+    //   }
+    // }
 
     @include share-rule(border-pseudo) {
       content: '';
@@ -290,13 +288,13 @@
     }
 
     // 表格右部伪 border
-    // &::after {
-    //   @include extend-rule(border-pseudo);
-    //   top: 0;
-    //   right: 0;
-    //   width: 1px;
-    //   height: 100%;
-    // }
+    &::after {
+      @include extend-rule(border-pseudo);
+      top: 0;
+      right: 0;
+      width: 1px;
+      height: 100%;
+    }
   }
 
   // 表格底部伪 border，总是有的
@@ -313,9 +311,9 @@
     border-right: none;
     border-bottom: none;
 
-    // &.el-loading-parent--relative {
-    //   border-color: inherit;
-    // }
+    &.el-loading-parent--relative {
+      border-color: transparent;
+    }
 
     .el-table__cell {
       border-right: $--table-border;
@@ -415,7 +413,7 @@
     & tbody td.el-table__cell {
       border-top: $--table-border;
       background-color: $--background-color-base;
-      color: $--table-font-color;
+      color: $--table-header-font-color;
     }
   }
 
@@ -448,7 +446,7 @@
 
     & tbody td.el-table__cell {
       background-color: $--background-color-base;
-      color: $--table-font-color;
+      color: $--table-header-font-color;
     }
   }
 
@@ -510,22 +508,22 @@
     left: 7px;
 
     &.ascending {
-      border-bottom-color: $--color-n50;
+      border-bottom-color: $--color-n90;
       top: 0px;
     }
 
     &.descending {
-      border-top-color: $--color-n50;
+      border-top-color: $--color-n90;
       bottom: 1px;
     }
   }
 
   .ascending .sort-caret.ascending {
-    border-bottom-color: $--color-n300;
+    border-bottom-color: $--color-n500;
   }
 
   .descending .sort-caret.descending {
-    border-top-color: $--color-n300;
+    border-top-color: $--color-n500;
   }
 
   .hidden-columns {

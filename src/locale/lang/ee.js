@@ -95,6 +95,9 @@ export default {
       clearFilter: 'Kõik',
       sumText: 'Summa'
     },
+    tabs: {
+      more: 'More'
+    },
     tree: {
       emptyText: 'Andmed puuduvad'
     },

@@ -95,6 +95,9 @@ export default {
       clearFilter: 'همه',
       sumText: 'جمع'
     },
+    tabs: {
+      more: 'More'
+    },
     tree: {
       emptyText: 'اطلاعاتی وجود ندارد'
     },

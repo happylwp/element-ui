@@ -95,6 +95,9 @@ export default {
       clearFilter: 'Guztia',
       sumText: 'Batura'
     },
+    tabs: {
+      more: 'More'
+    },
     tree: {
       emptyText: 'Daturik ez'
     },

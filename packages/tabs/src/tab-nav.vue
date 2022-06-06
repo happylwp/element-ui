@@ -1,6 +1,7 @@
 <script>
   import TabBar from './tab-bar';
   import { addResizeListener, removeResizeListener } from 'element-ui/src/utils/resize-event';
+  import { t } from 'element-ui/src/locale';
 
   function noop() {}
   const firstUpperCase = str => {
@@ -74,6 +75,9 @@
     },
 
     methods: {
+      t(...args) {
+        return t.apply(this, args);
+      },
       scrollPrev() {
         const containerSize = this.$refs.navScroll[`offset${firstUpperCase(this.sizeName)}`];
         const currentOffset = this.navOffset;
@@ -366,7 +370,7 @@
                 id="el-tabs--dropdown"
                 onCommand={ this.dropdownCommand }
                 trigger="click">
-                <el-button class="dropdown-btn">{ this.moreLabel || '更多' }<i class="el-icon-arrow-down"></i></el-button>
+                <el-button class="dropdown-btn">{ this.moreLabel || t('el.tabs.more') }<i class="el-icon-arrow-down"></i></el-button>
                 <el-dropdown-menu slot="dropdown">
                   {dropdowns}
                 </el-dropdown-menu>

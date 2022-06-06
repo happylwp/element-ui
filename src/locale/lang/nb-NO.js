@@ -94,6 +94,9 @@ export default {
       clearFilter: 'Alle',
       sumText: 'Sum' // to be translated
     },
+    tabs: {
+      more: 'Mer'
+    },
     tree: {
       emptyText: 'Ingen Data'
     },

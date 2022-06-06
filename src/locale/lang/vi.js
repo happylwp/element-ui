@@ -95,6 +95,9 @@ export default {
       clearFilter: 'Xóa hết',
       sumText: 'Tổng'
     },
+    tabs: {
+      more: 'Hơn'
+    },
     tree: {
       emptyText: 'Không có dữ liệu'
     },

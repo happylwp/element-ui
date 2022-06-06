@@ -95,6 +95,9 @@ export default {
       clearFilter: 'הכל',
       sumText: 'סך'
     },
+    tabs: {
+      more: 'More'
+    },
     tree: {
       emptyText: 'אין נתונים'
     },

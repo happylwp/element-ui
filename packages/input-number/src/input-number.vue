@@ -194,7 +194,7 @@
       }
     },
     created() {
-      this.debouncedHandleInputChange = debounce(300, this.handleInputChange);
+      this.debouncedHandleInputChange = debounce(1000, this.handleInputChange);
     },
     methods: {
       toPrecision(num, precision) {

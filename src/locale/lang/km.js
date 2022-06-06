@@ -95,6 +95,9 @@ export default {
       clearFilter: 'ទាំងអស់',
       sumText: 'បូក'
     },
+    tabs: {
+      more: 'More'
+    },
     tree: {
       emptyText: 'គ្មានទិន្ន័យ'
     },

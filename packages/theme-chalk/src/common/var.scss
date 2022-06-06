@@ -177,7 +177,7 @@ $--border-color-extra-light: $--color-n40 !default;
 
 // Background
 /// color|1|Background Color|4
-$--background-color-base: $--color-n20 !default;
+$--background-color-base: $--color-n30 !default;
 /// 默认hover背景色
 $--background-hover-color-base: $--color-n30 !default;
 
@@ -841,14 +841,14 @@ $--table-border: 1px solid $--table-border-color !default;
 $--table-drag-border: 1px solid transparent !default;
 // $--table-border: none !default;
 /// color||Color|0
-$--table-font-color: $--color-text-regular !default;
+$--table-font-color: $--color-text-primary !default;
 /// color||Color|0
-$--table-header-font-color: $--color-n200 !default;
+$--table-header-font-color: $--color-n300 !default;
 /// color||Color|0
 $--table-row-hover-background-color: $--color-b50 !default;
 $--table-current-row-background-color: $--color-b50 !default;
 /// color||Color|0
-$--table-header-background-color: $--color-white !default;
+$--table-header-background-color: $--color-n30 !default;
 $--table-header-hover-background-color: $--color-n30 !default;
 $--table-fixed-box-shadow: 0 0 10px rgba(0, 0, 0, .12) !default;
 

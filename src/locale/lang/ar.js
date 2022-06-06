@@ -94,6 +94,9 @@ export default {
       clearFilter: 'الكل',
       sumText: 'المجموع'
     },
+    tabs: {
+      more: 'More'
+    },
     tree: {
       emptyText: 'لايوجد بيانات'
     },

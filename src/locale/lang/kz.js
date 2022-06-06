@@ -95,6 +95,9 @@ export default {
       clearFilter: 'Барлығы',
       sumText: 'Сомасы'
     },
+    tabs: {
+      more: 'More'
+    },
     tree: {
       emptyText: 'Деректер жоқ'
     },

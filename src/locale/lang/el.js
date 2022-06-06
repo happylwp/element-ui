@@ -95,6 +95,9 @@ export default {
       clearFilter: 'Όλα',
       sumText: 'Σύνολο'
     },
+    tabs: {
+      more: 'More'
+    },
     tree: {
       emptyText: 'Χωρίς Δεδομένα'
     },

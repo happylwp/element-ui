@@ -95,6 +95,9 @@ export default {
       clearFilter: 'Kaikki',
       sumText: 'Summa'
     },
+    tabs: {
+      more: 'Lisää'
+    },
     tree: {
       emptyText: 'Ei tietoja'
     },

@@ -94,6 +94,9 @@ export default {
       clearFilter: 'Tot',
       sumText: 'Tot'
     },
+    tabs: {
+      more: 'More'
+    },
     tree: {
       emptyText: 'Sense Dades'
     },

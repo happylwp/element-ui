@@ -95,6 +95,9 @@ export default {
       clearFilter: 'Semua',
       sumText: 'Jml'
     },
+    tabs: {
+      more: 'Lagi'
+    },
     tree: {
       emptyText: 'Tidak ada data'
     },

@@ -95,6 +95,9 @@ export default {
       clearFilter: 'Todos',
       sumText: 'Sum' // to be translated
     },
+    tabs: {
+      more: 'Mais'
+    },
     tree: {
       emptyText: 'Sem dados'
     },

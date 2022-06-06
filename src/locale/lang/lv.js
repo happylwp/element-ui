@@ -95,6 +95,9 @@ export default {
       clearFilter: 'Visi',
       sumText: 'Summa'
     },
+    tabs: {
+      more: 'More'
+    },
     tree: {
       emptyText: 'Nav datu'
     },

@@ -95,6 +95,9 @@ export default {
       clearFilter: '全部',
       sumText: '合计'
     },
+    tabs: {
+      more: '更多'
+    },
     tree: {
       emptyText: '暂无数据'
     },

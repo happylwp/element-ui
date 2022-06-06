@@ -94,6 +94,9 @@ export default {
       clearFilter: 'Alle',
       sumText: 'Sum'
     },
+    tabs: {
+      more: 'Mere'
+    },
     tree: {
       emptyText: 'Ingen data'
     },

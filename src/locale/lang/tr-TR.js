@@ -95,6 +95,9 @@ export default {
       clearFilter: 'Hepsi',
       sumText: 'Sum'
     },
+    tabs: {
+      more: 'Daha'
+    },
     tree: {
       emptyText: 'Veri yok'
     },

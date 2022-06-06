@@ -97,6 +97,9 @@ export default {
       clearFilter: 'Vše',
       sumText: 'Celkem'
     },
+    tabs: {
+      more: 'More'
+    },
     tree: {
       emptyText: 'Žádná data'
     },

@@ -95,6 +95,9 @@ export default {
       clearFilter: '전체',
       sumText: '합'
     },
+    tabs: {
+      more: '더'
+    },
     tree: {
       emptyText: '데이터 없음'
     },

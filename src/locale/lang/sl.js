@@ -95,6 +95,9 @@ export default {
       clearFilter: 'Vse',
       sumText: 'Skupno'
     },
+    tabs: {
+      more: 'More'
+    },
     tree: {
       emptyText: 'Ni podatkov'
     },

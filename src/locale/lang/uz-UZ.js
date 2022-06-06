@@ -95,6 +95,9 @@ export default {
       clearFilter: 'Jami',
       sumText: 'Summasi'
     },
+    tabs: {
+      more: 'More'
+    },
     tree: {
       emptyText: 'Maʼlumot yoʻq'
     },

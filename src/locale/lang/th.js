@@ -95,6 +95,9 @@ export default {
       clearFilter: 'ทั้งหมด',
       sumText: 'รวม'
     },
+    tabs: {
+      more: 'มากกว่า'
+    },
     tree: {
       emptyText: 'ไม่พบข้อมูล'
     },

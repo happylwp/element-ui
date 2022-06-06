@@ -95,6 +95,9 @@ export default {
       clearFilter: 'ھەممە',
       sumText: 'جەمئىي'
     },
+    tabs: {
+      more: 'More'
+    },
     tree: {
       emptyText: 'ئۇچۇر يوق'
     },

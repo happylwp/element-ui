@@ -95,6 +95,9 @@ export default {
       clearFilter: 'Hemû',
       sumText: 'Kom'
     },
+    tabs: {
+      more: 'More'
+    },
     tree: {
       emptyText: 'Agahî tune'
     },

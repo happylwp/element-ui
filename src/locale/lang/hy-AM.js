@@ -95,6 +95,9 @@ export default {
       clearFilter: 'Բոլորը',
       sumText: 'Գումարը'
     },
+    tabs: {
+      more: 'More'
+    },
     tree: {
       emptyText: 'Տուեալներ չկան'
     },

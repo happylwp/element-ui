@@ -95,6 +95,9 @@ export default {
       clearFilter: 'すべて',
       sumText: '合計'
     },
+    tabs: {
+      more: 'もっと'
+    },
     tree: {
       emptyText: 'データなし'
     },

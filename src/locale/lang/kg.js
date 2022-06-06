@@ -95,6 +95,9 @@ export default {
       clearFilter: 'бүткөн',
       sumText: 'Бардыгы болуп'
     },
+    tabs: {
+      more: 'More'
+    },
     tree: {
       emptyText: 'маалымат жок'
     },

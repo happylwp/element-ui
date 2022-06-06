@@ -94,6 +94,9 @@ export default {
       clearFilter: 'Mind',
       sumText: 'Összeg'
     },
+    tabs: {
+      more: 'More'
+    },
     tree: {
       emptyText: 'Nincs adat'
     },

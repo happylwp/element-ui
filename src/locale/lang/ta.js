@@ -94,6 +94,9 @@ export default {
       clearFilter: 'அனைத்தும்',
       sumText: 'கூட்டு'
     },
+    tabs: {
+      more: 'More'
+    },
     tree: {
       emptyText: 'தரவு இல்லை'
     },

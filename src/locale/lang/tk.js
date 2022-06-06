@@ -95,6 +95,9 @@ export default {
       clearFilter: 'Hemmesi',
       sumText: 'Jemi'
     },
+    tabs: {
+      more: 'More'
+    },
     tree: {
       emptyText: 'Maglumat ýok'
     },

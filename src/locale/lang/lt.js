@@ -95,6 +95,9 @@ export default {
       clearFilter: 'Išvalyti',
       sumText: 'Suma'
     },
+    tabs: {
+      more: 'More'
+    },
     tree: {
       emptyText: 'Nėra duomenų'
     },

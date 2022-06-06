@@ -95,6 +95,9 @@ export default {
       clearFilter: 'All',
       sumText: 'Sum'
     },
+    tabs: {
+      more: 'More'
+    },
     tree: {
       emptyText: 'No Data'
     },

@@ -95,6 +95,9 @@ export default {
       clearFilter: 'Всички',
       sumText: 'Sum' // to be translated
     },
+    tabs: {
+      more: '| Повече ▼'
+    },
     tree: {
       emptyText: 'Няма данни'
     },

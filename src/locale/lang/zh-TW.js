@@ -95,6 +95,9 @@ export default {
       clearFilter: '全部',
       sumText: 'Sum' // to be translated
     },
+    tabs: {
+      more: '更多'
+    },
     tree: {
       emptyText: '暫無資料'
     },
