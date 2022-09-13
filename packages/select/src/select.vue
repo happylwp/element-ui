@@ -753,6 +753,7 @@
           }
           if (this.visible) {
             (this.$refs.input || this.$refs.reference).focus();
+            if (this.$refs.popper) this.$refs.popper.$el.style.width = `${this.inputWidth}px`;
           }
         }
       },
