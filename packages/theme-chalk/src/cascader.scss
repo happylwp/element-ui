@@ -106,7 +106,7 @@
         border-color: transparent;
       }
 
-      > span {
+      > span:not(.el-tag__close) {
         flex: 1;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -114,12 +114,6 @@
 
       .el-icon-close {
         flex: none;
-        background-color: $--color-text-placeholder;
-        color: $--color-white;
-
-        &:hover {
-          background-color: $--color-text-secondary;
-        }
       }
     }
   }

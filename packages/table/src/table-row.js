@@ -1,3 +1,4 @@
+import ElCheckbox from 'element-ui/packages/checkbox';
 export default {
   name: 'ElTableRow',
   props: [
@@ -20,6 +21,9 @@ export default {
     'handleCellMouseEnter',
     'fixed'
   ],
+  components: {
+    ElCheckbox
+  },
   render() {
     const {
       columns,
@@ -39,9 +43,6 @@ export default {
       <tr>
         {
           columns.map((column, cellIndex) => {
-            if (columnsHidden[cellIndex] && this.fixed) {
-              return null;
-            }
             const { rowspan, colspan } = this.getSpan(row, column, $index, cellIndex);
             if (!rowspan || !colspan) {
               return null;
