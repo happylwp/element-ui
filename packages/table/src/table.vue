@@ -295,6 +295,8 @@
 
       summaryMethod: Function,
 
+      showSumTooltip: Boolean,
+
       rowClassName: [String, Function],
 
       rowStyle: [Object, Function],

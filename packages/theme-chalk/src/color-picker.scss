@@ -195,6 +195,11 @@
   @include e(btns) {
     margin-top: 6px;
     text-align: right;
+
+    .el-button--medium {
+      padding-top: 6px;
+      padding-bottom: 6px;
+    }
   }
 
   @include e(value) {

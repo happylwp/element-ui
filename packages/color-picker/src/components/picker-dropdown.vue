@@ -20,7 +20,7 @@
           </el-input>
         </span>
         <el-button
-          size="mini"
+          size="medium"
           type="text"
           class="el-color-dropdown__link-btn"
           @click="$emit('clear')">
@@ -28,7 +28,7 @@
         </el-button>
         <el-button
           plain
-          size="mini"
+          size="medium"
           class="el-color-dropdown__btn"
           @click="confirmValue">
           {{ t('el.colorpicker.confirm') }}
